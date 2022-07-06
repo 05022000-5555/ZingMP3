@@ -1,0 +1,475 @@
+/* tablet */
+@media only screen and (min-width: 740px) and (max-width: 1023px) {
+    .song-playlist-content {
+      width: 100%;
+      margin-left: 70px;
+    }
+    .menu-song-playlist .menu-logo{
+        display: none;
+    }
+    .menu-song-playlist {
+      width: 70px;
+      position: fixed;
+      z-index: 2;
+      height: 100%;
+    }
+    .menu-playlist-item-text {
+      display: none;
+    }
+    .logo-image {
+      display: none;
+    }
+    .logo-image-mobile {
+      display: block;
+      width: 70px;
+      height: 40px;
+    }
+    .menu-logo {
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      align-items: center;
+    }
+    .menu-song-playlist-bottom {
+      overflow-y: unset;
+    }
+    .menu-playlist-item i {
+      font-size: 20px;
+    }
+    .menu-song-vip {
+      display: none;
+    }
+    .menu-playlist-item {
+      margin: 0;
+      padding-left: 10px;
+      justify-content: flex-start;
+    }
+    .tab-container-artis-title {
+      padding: 20px 0;
+    }
+    .user-profile-vipcode button:nth-child(2) {
+      display: none;
+    }
+    .new-album-playlist-song2 {
+      display: flex;
+      scroll-behavior: smooth;
+      flex-wrap: nowrap;
+      margin: 10px 0;
+      overflow-x: auto;
+      border-radius: 5px;
+    }
+    .new-album-item-image2 {
+      margin-right: 10px;
+    }
+    .new-album-item-image2-link {
+      width: 180px;
+      overflow: hidden;
+    }
+    .new-album-item-image2-link img {
+      width: 100%;
+      object-fit: cover;
+    }
+    .new-album-playlist-song2::-webkit-scrollbar {
+      display: none;
+    }
+    .tab-container-mv-body-item {
+      width: 49.333333%;
+    }
+    .tab-container-mv-title {
+      padding: 20px 0;
+    }
+    .tab-container-album-body-item {
+      width: 25%;
+  
+      padding: 0 5px;
+    }
+    .tab-container-album-body-item-image {
+      height: 155px;
+    }
+    .tab-container-album-body-item-image img {
+      height: 100%;
+    }
+  
+    .tab-container-artis-body-item {
+      width: 25%;
+    }
+    .tab-container-artis-body-info span {
+      padding-bottom: 10px;
+    }
+    .tab-ui-playlist {
+      margin: 20px auto;
+    }
+    .tab-ui-playlist-item {
+      width: 650px;
+    }
+    #listen {
+      height: 90px;
+    }
+    .music_play_right i:nth-child(2) {
+      display: none;
+    }
+    .music_play_right i:nth-child(3) {
+      display: none;
+    }
+    .player-onscreen-listen-right i:nth-child(1) {
+      display: none;
+    }
+    .player-onscreen-info {
+      position: relative;
+      top: 30%;
+    }
+    .player-onscreen-cd {
+      position: relative;
+      top: 15%;
+    }
+    .player-onscreen-info-title {
+      padding: 0;
+    }
+    .player-onscreen-info-title h4 {
+      font-size: 25px;
+    }
+    #live {
+      display: none;
+    }
+    #name-song {
+      font-size: 25px;
+      margin: 10px 0;
+    }
+    #single-name {
+      font-size: 20px;
+    }
+    .menu-song-add-playlist {
+      display: none;
+    }
+    .navbar-song-playlist {
+      z-index: 1;
+    }
+  
+    .menu-song-create-playlist-mobile {
+      display: block;
+      position: fixed;
+      bottom: 100px;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      width: inherit;
+      display: flex;
+      justify-content: center;
+    }
+    .create-playlist-click {
+      background-color: var(--hover-color);
+      border-radius: 100rem;
+      padding: 13px 20px;
+      width: 50px;
+      height: 50px;
+      color:var(--white-color);
+    }
+    .create-playlist-click i {
+      font-size: 13px;
+    }
+    @keyframes expandSidebar {
+      from {
+        width: 70px;
+      }
+      to {
+        width: 240px;
+      }
+    }
+  
+    @keyframes expandSidebarItem {
+      from {
+        width: 70px;
+      }
+      to {
+        width: 100%;
+      }
+    }
+    .menu-song-playlist.expand {
+      width: 240px;
+      animation: expandSidebar 0.05s linear;
+      position: fixed;
+      height: 100%;
+      z-index: 2;
+      overflow: hidden;
+      transition: all 0.25s;
+    }
+    .menu-song-create-playlist-mobile.expand {
+      justify-content: flex-end;
+      padding-right: 10px;
+      animation: expandSidebar 0.05s linear;
+    }
+    .menu-playlist-item-text.expand {
+      display: block;
+      font-size: 15px;
+      animation: expandSidebar 0.05s linear;
+    }
+    .logo-image.expand {
+      display: block;
+      animation: expandSidebar 0.05s linear;
+    }
+    .logo-image-mobile.expand {
+      display: none;
+    }
+    .menu-logo.expand {
+      justify-content: flex-start;
+      padding-left: 30px;
+      animation: expandSidebar 0.05s linear;
+    }
+    .menu-playlist-item-link {
+      display: flex;
+      padding: 13px;
+    }
+    .themes-item{
+      width: 120px;
+      margin: 5px;
+    }
+    .modal-content{
+      width: inherit;
+    }
+  }
+  /* mobile */
+  @media only screen and (max-width: 740px) {
+    #listen,
+    .player-onscreen-listen {
+      height: 90px;
+      padding: 0 16px;
+      align-items: center;
+    }
+    #wave {
+      display: none;
+    }
+    .music_play_left {
+      width: 40%;
+      margin-right: 10px;
+    }
+    .music_play_mid {
+      margin-top: 10px;
+    }
+    #progress-volume,
+    .repeat,
+    .music_play_mid_progress,
+    .music_play_mid_icon :nth-child(2),
+    .music_play_mid_icon i:nth-child(5),
+    .music_play_right i:nth-child(2),
+    .music_play_right i:nth-child(3),
+    .music_play_right i:nth-child(4) {
+      display: none;
+    }
+    .music_play_right {
+      justify-content: flex-end;
+    }
+    .media_title--name {
+      font-size: 14px;
+    }
+    #artis {
+      font-size: 10px;
+    }
+    .menu-song-playlist {
+      display: none;
+    }
+    .song-playlist-content {
+      width: 100%;
+    }
+    .tab {
+      margin: 0;
+      padding: 0 10px;
+    }
+    .navbar-song-playlist {
+      padding: 0 10px;
+    }
+    .tab-ui-playlist {
+      overflow: hidden;
+      overflow-x: scroll;
+      padding: 10px;
+    }
+    .tab-ui-playlist::-webkit-scrollbar,
+    .list-song-playlist::-webkit-scrollbar {
+      display: none;
+    }
+    .user-profile-vipcode,
+    .cd,
+    .navbar-song-icon {
+      display: none;
+    }
+    .list-song-playlist {
+      width: 100%;
+      padding: 0;
+    }
+    .navbar-song-setting i:nth-child(2),
+    .navbar-song-setting i:nth-child(3),
+    .navbar-song-setting i:nth-child(4),
+    .track-repeat {
+      display: none;
+    }
+    .navbar-song-search {
+      flex: 1;
+      padding: 7px 10px;
+      border-radius: 15px;
+    }
+    .navbar-song-setting {
+      width: 30%;
+      justify-content: flex-end;
+    }
+    .navbar-song-setting i {
+      margin-right: 3px;
+    }
+    .tab-item-link:nth-child(7),
+    .tab-item-link:nth-child(3) {
+      display: none;
+    }
+    .tab-ui-playlist-item {
+      justify-content: flex-start;
+      width: unset;
+      padding: 0 5px;
+    }
+    .tab-item-link {
+      font-size: 8px;
+      width: 100%;
+    }
+    .new-album-playlist-song {
+      margin-bottom: 40px;
+    }
+    .new-album-playlist-song2 {
+      flex-wrap: nowrap;
+      overflow: overlay hidden !important;
+      overflow-x: auto;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    .new-album-item-image2 {
+      margin-right: 10px;
+    }
+    .new-album-item-image2-link {
+      width: 114px;
+      height: 114px;
+      overflow: hidden;
+    }
+    .new-album-item-image2-link img {
+      width: 100%;
+      object-fit: cover;
+    }
+    .new-album-playlist-song2::-webkit-scrollbar {
+      display: none;
+    }
+    .new-album-playlist-song3 {
+      width: 100%;
+    }
+    .new-album-item-image3-link {
+      width: 114px;
+      height: 114px;
+    }
+    .new-album-item-image3 img {
+      height: 114px;
+    }
+    .list-song-timer-total,
+    .tab-container-song-playlist-all-timer {
+      display: none;
+    }
+    .tab-all-click-upload button:nth-child(1) {
+      display: none;
+    }
+    .tab-all-click-upload button:nth-child(2) {
+      padding: 2px 14px;
+    }
+    .playlist-body {
+      margin-bottom: 40px;
+    }
+    .tab-container-mv-body-item {
+      width: 100%;
+    }
+    .tab-container-mv-title {
+      padding: 20px 0;
+    }
+    .tab-container-album-body-item {
+      width: 33.33333333%;
+      height: 177.66px;
+      padding: 0 5px;
+      margin: 10px 0;
+    }
+    .tab-container-album-body-item-image {
+      height: 111.66px;
+    }
+    .tab-container-album-body-item-text p {
+      font-size: 13px;
+    }
+    .tab-container-album-title h3 {
+      padding-left: 4px;
+    }
+    .tab-container-album-title {
+      padding: 20px 0;
+    }
+    .tab-container-artis-title {
+      padding: 20px 0;
+    }
+    .tab-container-artis-body {
+      justify-content: space-between;
+    }
+    .tab-container-artis-body-item {
+      width: 50%;
+    }
+    .new-album-item:nth-child(1),
+    .new-album-item:nth-child(2) {
+      width: 50%;
+      height: 196px;
+      border-radius: 5px;
+    }
+    .new-album-item-image {
+      height: 100%;
+    }
+    .player-onscreen-content {
+      padding: 0 3px;
+    }
+    .player-onscreen-header {
+      width: 100%;
+      margin: 0;
+    }
+    .player-onscreen-content-link {
+      font-size: 10px;
+      padding: 7px 5px;
+    }
+    .player-onscreen-content-link:nth-child(3) {
+      display: none;
+    }
+    .action-icon:nth-child(1),
+    .action-icon:nth-child(2),
+    .player-onscreen-listen-left,
+    .player-onscreen-listen-right {
+      display: none;
+    }
+    .player-onscreen-listen {
+      width: 100%;
+    }
+    .player-onscreen-listen-mid {
+      width: 100%;
+    }
+    .player-onscreen-cd-image {
+      width: 250px;
+    }
+    .player-onscreen-info {
+      position: relative;
+      top: 20%;
+    }
+    .player-onscreen-cd {
+      position: relative;
+      top: 15%;
+    }
+    .modal-content {
+      width: 100%;
+      overflow-y: auto;
+    }
+    .themes-image{
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .themes-item{
+      width: 120px;
+      margin: 10px;
+    }
+  }
+  /* desktop */
+  @media only screen and (min-width: 1440px) {
+    .tab-container-artis-body-item {
+        width: 16%;
+        height: 296px;
+        margin: 0px 0px 30px;
+        padding: 0px 15px;
+    }
+  }
