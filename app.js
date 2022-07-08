@@ -39,6 +39,7 @@ const creatMobile = document.querySelector(".create-playlist-click");
 const menuSongPlaylist = document.querySelector(".menu-song-playlist");
 const navHeader = document.querySelector(".navbar-song-playlist");
 
+
 let isPlaying = true;
 let isrepeat = false;
 let songIndex = 0;
@@ -460,15 +461,24 @@ function clickPlay() {
     cdImage.classList.add("rotate");
     wave.classList.add("loader");
     wave2.classList.add("loader");
+
+    musicImage.classList.remove("pause");
+    onscreenImage.classList.remove("pause");
+    cdImageOnscreen.classList.remove("pause");
+    cdImage.classList.remove("pause");
   } else {
     song.pause();
     isPlaying = true;
     btnPlay.classList.remove("fa-pause");
     buttonPlay2.classList.remove("fa-pause");
-    onscreenImage.classList.remove("rotate");
-    musicImage.classList.remove("rotate");
-    cdImageOnscreen.classList.remove("rotate");
-    cdImage.classList.remove("rotate");
+    // onscreenImage.classList.remove("rotate");
+    // musicImage.classList.remove("rotate");
+    // cdImageOnscreen.classList.remove("rotate");
+    // cdImage.classList.remove("rotate");
+    musicImage.classList.add("pause");
+    onscreenImage.classList.add("pause");
+    cdImageOnscreen.classList.add("pause");
+    cdImage.classList.add("pause");
     wave.classList.remove("loader");
     wave2.classList.remove("loader");
   }
@@ -586,13 +596,37 @@ progressVolumenew.addEventListener("change", function (e) {
 progressVolume.addEventListener("change", handleVolume);
 function handleVolume() {
   song.volume = progressVolume.value / 100;
+  if(song.volume == 0){
+    volume.classList.add("fa-volume-xmark")
+  } else{
+    volume.classList.remove("fa-volume-xmark")
+  }
 }
 
 //tích vào trái tym vote
+// sweet alert
+const alertSweet1 = `<div class="sweet-alert">
+  <i class="fa fa-check sweet-icon icon"></i>
+  <span class="content">Bạn đã thêm vào danh sách yêu thích</span>
+  </div>`
+const alertSweet2 = `
+  <div class="sweet-alert">
+    <i class="fa fa-check sweet-icon icon"></i>
+    <span class="content">Bạn đã hủy khỏi danh sách yêu thích</span>
+  </div>
+`
 const voteHeart = document.querySelectorAll(".fa-heart");
 voteHeart.forEach((item) => {
   item.addEventListener("click", function (e) {
+    const sweet = document.querySelector(".sweet-alert")
+    const trash = document.querySelector(".trash")
     item.classList.toggle("vote");
+    sweet.style.transform = "translateX(0)"
+    trash.style.transform = "translateX(0)"
+    setTimeout(()=>{
+      sweet.style.transform = "translateX(150%)"
+    },4000)
+
   });
 });
 
@@ -913,7 +947,7 @@ document.body.addEventListener("click", function (e) {
         document.querySelector(".App").classList.remove("purple_color");
         document.querySelector(".App").classList.add("red_color");
       }
-      if (index === 4) {
+      if (index === 4) {0
         document.querySelector(".App").classList.remove("dark_color");
         document.querySelector(".App").classList.remove("green_color");
         document.querySelector(".App").classList.remove("red_color");
@@ -922,4 +956,21 @@ document.body.addEventListener("click", function (e) {
     });
   });
 });
-1
+
+//  fix
+const volume = document.querySelector(".volume")
+console.log(volume)
+document.body.addEventListener("keypress", (e)=>{
+  if(e.keyCode == 32){
+    e.preventDefault()
+    clickPlay()
+  }
+})
+volume.addEventListener("click", (e)=>{
+  song.volume = 0
+  progressVolume.value = 0
+  volume.classList.toggle("fa-volume-xmark")
+  if(volume.classList.contains("fa-volume-xmark")){
+    progressVolume.value = 0.5
+  }
+})
